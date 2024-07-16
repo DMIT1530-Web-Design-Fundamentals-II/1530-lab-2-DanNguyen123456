@@ -51,6 +51,11 @@ header {
     background-color: #20abad;
 }
 
+.svg {
+    max-width: 1.2rem;
+    filter: invert(99%) sepia(4%) saturate(61%) hue-rotate(120deg) brightness(114%) contrast(100%);
+}
+
 /* MOBILE VIEW */
 .banner {
     background-color: #ff8e2d;
@@ -60,7 +65,6 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 26rem;
 }
 
 h1 {
@@ -105,8 +109,63 @@ h2 {
     line-height: 3rem;
 }
 
+.svg {
+    display: none;
+}
+
 /* DESKTOP VIEW */
-@media screen and (min-width: 720px) {}
+@media screen and (min-width: 720px) {
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 2rem;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    li {
+        padding: 0rem 3rem 0rem 3rem;
+    }
+
+    .submenu {
+        position: absolute;
+        opacity: 0;
+        margin: 0;
+        background-color: #20abad;
+    }
+
+    .svg {
+        display: inline;
+        padding-left: .4rem;
+    }
+
+    ul li:hover>ul,
+    ul li:focus-within>ul,
+    .submenu:hover {
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        padding: 0rem 0rem 2rem 0rem;
+        transition: opacity .4s;
+    }
+
+    .banner {
+        background-image: url('/img/grapefruit-bg.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-flow: column;
+        width: auto;
+        height: auto;
+    }
+
+}
 
 /* LARGEST VIEW */
 @media screen and (min-width: 1024px) {}
