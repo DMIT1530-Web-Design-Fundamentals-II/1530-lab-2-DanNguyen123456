@@ -88,6 +88,9 @@ nav {
 
 .banner>div {
     padding: 4rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .banner>div>p {
@@ -115,6 +118,10 @@ h2 {
 
 /* DESKTOP VIEW */
 @media screen and (min-width: 720px) {
+    header {
+        align-items: center;
+    }
+
     nav {
         display: flex;
         justify-content: center;
@@ -133,10 +140,12 @@ h2 {
     }
 
     .submenu {
+        visibility: hidden;
         position: absolute;
         opacity: 0;
         margin: 0;
         background-color: #20abad;
+        z-index: 1;
     }
 
     .svg {
@@ -145,6 +154,7 @@ h2 {
     }
 
     ul li:hover>ul,
+    ul li:focus>ul,
     ul li:focus-within>ul,
     .submenu:hover {
         visibility: visible;
@@ -161,11 +171,29 @@ h2 {
         background-size: cover;
         display: flex;
         flex-flow: column;
-        width: auto;
-        height: auto;
+    }
+
+    .banner>div {
+        position: relative;
+        left: 10%;
+        margin: 11.3rem;
+    }
+
+    .banner>div>p {
+        padding: 2rem 3rem 0rem 3rem;
     }
 
 }
 
 /* LARGEST VIEW */
-@media screen and (min-width: 1024px) {}
+@media screen and (min-width: 1024px) {
+    header {
+        display: flex;
+        justify-content: center;
+        flex-flow: column;
+    }
+
+    nav {
+        max-width: 1024px;
+    }
+}
