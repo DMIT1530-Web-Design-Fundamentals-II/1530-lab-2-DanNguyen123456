@@ -196,4 +196,9 @@ h2 {
     nav {
         max-width: 1024px;
     }
+
+    .banner>div {
+        max-width: 1024px;
+        left: 20%;
+    }
 }
