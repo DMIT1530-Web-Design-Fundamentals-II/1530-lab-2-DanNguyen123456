@@ -15,17 +15,98 @@ font-family: 'Pacifico', cursive;
 */
 
 /* UNIVERSAL STYLES */
+ul {
+    list-style: none;
+}
 
+li {
+    margin: 2rem 1rem 0rem 1rem;
+}
+
+.submenu>li>a {
+    text-decoration: none;
+}
+
+h1,
+h2 {
+    font-family: 'Pacifico', cursive;
+    color: #fff;
+}
+
+h3 {
+    display: none;
+}
+
+a {
+    text-transform: uppercase;
+}
+
+a,
+p {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+header {
+    background-color: #20abad;
+}
 
 /* MOBILE VIEW */
+.banner {
+    background-color: #ff8e2d;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/img/grapefruit-bg.jpg');
+    width: auto;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 26rem;
+}
 
+h1 {
+    padding-top: 1rem;
+}
+
+h1,
+h2,
+p {
+    text-align: center;
+}
+
+nav {
+    padding-bottom: 3rem;
+}
+
+.banner {
+    background-size: 150%;
+    background-position-x: 0%;
+}
+
+.banner>div {
+    padding: 4rem;
+}
+
+.banner>div>p {
+    padding-top: 1rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+.button>div {
+    background-color: #20abad;
+    border-radius: .5rem;
+    max-width: 8rem;
+    min-height: 3rem;
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+    line-height: 3rem;
+}
 
 /* DESKTOP VIEW */
-@media screen and (min-width: 720px) {
-
-}
+@media screen and (min-width: 720px) {}
 
 /* LARGEST VIEW */
-@media screen and (min-width: 1024px) {
-    
-}
+@media screen and (min-width: 1024px) {}
